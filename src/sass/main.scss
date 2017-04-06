@@ -18,3 +18,85 @@
 @import "components/tables";
 @import "components/navigation";
 @import "components/layout";
+
+// header
+
+nav{
+  display: flex;
+}
+nav a{
+  color: #fff;
+}
+nav a:hover{
+  color: #eca432;
+  text-decoration: none;
+}
+.logo{
+  display: flex;
+  flex: 1;
+}
+.logo h1{
+    color: #fff;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex: 1;
+    justify-content: space-between;
+    padding-left: 0;
+}
+nav ul li{
+  text-transform: uppercase;
+  margin-left: 1.2rem;
+}
+nav h1{
+  margin-top: 0;
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  text-align: center;
+}
+.intro h1{
+  font-size: 5rem;
+  color: #fff;
+}
+.intro h2{
+  font-family: $font-family;
+  color: #fff;
+  margin-top: 0;
+}
+header{
+  background: url("../images/header-bg-desktop.png");
+  background-size: cover;
+  padding: 2rem 0;
+  min-height: 90vh;
+}
+
+@media (max-width: 700px) {
+  nav{
+    flex-direction: column;
+    flex-wrap:wrap;
+  }
+  nav ul{
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  nav ul li:first-child{
+    margin-left: 0;
+  }
+  .intro{
+    margin-top: 2rem;
+  }
+.logo{
+  display: block;
+  text-align: center;
+  }
+}
+@media (max-width: 560px) {
+  header{
+    min-height: 50vh;
+  }
+}
